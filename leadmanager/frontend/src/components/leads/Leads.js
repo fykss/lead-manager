@@ -15,13 +15,14 @@ export class Leads extends Component {
   }
 
   render() {
+    let count = 1;
     return (
       <Fragment>
         <h2>Leads</h2>
         <table className="table table-striped">
           <thead>
           <tr>
-            <th>ID</th>
+            <th>#</th>
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
@@ -31,7 +32,7 @@ export class Leads extends Component {
           <tbody>
           {this.props.leads.map(lead => (
             <tr key={lead.id}>
-              <td>{lead.id}</td>
+              <td>{count++}.</td>
               <td>{lead.name}</td>
               <td>{lead.email}</td>
               <td>{lead.message}</td>
